@@ -21,7 +21,7 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef> Action </th>   
     <td mat-cell *matCellDef="let element"> 
-      <button mat-raised-button color="primary" >Edit</button> 
+      <button mat-raised-button color="primary" [routerLink]="[element.id, 'edit']" routerLinkActive="router-link-active" >Edit</button> 
       <button mat-raised-button color="warn" (click)="deleteCategory(element)">Delete</button> 
     </td>
   </ng-container>

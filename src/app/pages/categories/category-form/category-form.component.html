@@ -1,3 +1,19 @@
-<p>
-  category-form works!
-</p>
+
+
+<div class="container">
+  <h2>Formulario de Categoria</h2>
+  <h3>{{pageTitle}}</h3>
+  <form [formGroup]="categoryForm" (submit)="submitForm()">
+   
+  
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </form>
+</div>

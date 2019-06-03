@@ -7,6 +7,9 @@ import { CategoryFormComponent } from './category-form/category-form.component';
 
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,8 +17,11 @@ import {MatButtonModule} from '@angular/material/button';
   imports: [
     CommonModule,
     CategoriesRoutingModule,
+    ReactiveFormsModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
   ]
 })
 export class CategoriesModule { }
