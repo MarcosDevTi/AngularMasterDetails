@@ -4,7 +4,7 @@ import { catchError, map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injector } from '@angular/core';
 
-export class BaseResourceRervice<T extends BaseResource> {
+export class BaseResourceService<T extends BaseResource> {
 
     protected http: HttpClient;
     constructor(
