@@ -10,7 +10,7 @@ import { EntryService } from '../shared/entry.service.ts';
 })
 export class EntryListComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'name', 'description', 'type', 'amount', 'date', 'paid', 'actions'];
+  displayedColumns: string[] = ['id', 'name', 'description', 'category', 'amount', 'date', 'paid', 'actions'];
 
 entries: Entry[] = [];
   constructor(private entryService: EntryService) { }
