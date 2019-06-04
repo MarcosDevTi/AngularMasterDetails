@@ -1,0 +1,47 @@
+
+
+<div class="container">
+  <h2>Formulario de Lançamentos</h2>
+  <h3>{{pageTitle}}</h3>
+  <form [formGroup]="entryForm" (submit)="submitForm()">
+   
+  
+    <mat-form-field>
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    
+    <mat-form-field>
+      <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Type" formControlName="type">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Amount" formControlName="amount">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Pate" formControlName="date">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Paid" formControlName="paid">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="categoryId">
+        <mat-option *ngFor="let category of categories" [value]="category.id">
+          {{category.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+   
+  
+    <button mat-raised-button color="primary" type="submit">Save</button>
+  </form>
+</div>
+
+<div *ngIf="serverErrorMessages" class="content-alert">
+  <ul  class="alert alert-danger">
+    <li *ngFor="let error of serverErrorMessages">{{error}}</li>
+  </ul>
+</div>
